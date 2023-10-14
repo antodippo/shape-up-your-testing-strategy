@@ -4,20 +4,197 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Shape up your testing strategy</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-
-		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="dist/theme/sky.css">
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-state="no-title-footer">
+					<h3>💪 Shape up 💪<br/> your testing strategy</h3>
+					<h5>Balancing Unit, Integration and E2E Tests</h5>
+					<small>Antonello D'Ippolito - PHPCon Poland 2023</small>
+				</section>
+
+				<section>
+					<h4>What's an automated test suite?</h4>
+					<p class="fragment">Collection of test cases and scenarios...</p>
+					<p class="fragment">...to verify the correctness of a software system</p>
+				</section>
+
+				<section>
+					<h4>Lots of design choices to be made!</h4>
+					<h3>🔺 🔵 🔶 🟩</h3>
+				</section>
+
+				<section>
+					<div >
+						<br/>
+						<p>🇮🇹 CIAO! 🤌</p>
+						<h3>Antonello D'Ippolito</h3>
+						<small>Software engineer @ Mollie 🇳🇱</small>
+						<p>@antodippo</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Why test?</h3>
+				</section>
+
+				<section>
+					<h4>Someone <b>always</b> tests:<br/>you, your system or your users</h4>
+				</section>
+
+				<section>
+					<img height="600" src="assets/feedbackloops.png">
+				</section>
+
+				<section>
+					<h3>Pulse check</h3>
+				</section>
+
+				<section>
+					<h4>In a fast iterative process (CI/CD)</br>you want the loop to be as <b>fast</b> as possible</h4>
+					<h3>🏃‍ 💨️</h3>
+				</section>
+
+				<section>
+					<p class="stretch" wordcloud='{
+						"weightFactor": 12, "fontFamily": "Quicksand", "color": "dark",
+						"wait": 1000, "shuffle": true, "drawOutOfBound": false
+					}'>
+					40 Good test suite
+					6 Stable
+					8 Fast
+					6 Trustable
+					5 Informative
+					</p>
+				</section>
+
+				<section>
+					<h4>Design your test suite with the same care<br/>as your <b>production</b> code</h4>
+				</section>
+
+				<section>
+					<p class="stretch" wordcloud='{
+						"weightFactor": 12, "fontFamily": "Quicksand",
+						"wait": 300, "shuffle": true, "drawOutOfBound": false
+					}'>
+						12 TEST TYPES
+						8 Unit
+						8 Integration
+						8 E2E
+						8 Functional
+						6 Integrated
+						8 Component
+						8 Acceptance
+						8 System
+						6 Small
+						6 Medium
+						6 Large
+						6 Contract
+						6 Regression
+						3 Smoke
+						3 Sanity
+						3 Performance
+						3 Load
+						6 Narrow
+						6 Broad
+					</p>
+				</section>
+
+				<section style="text-align:left;">
+					<h4>Identifying tests by <b>size</b>:</h4>
+					<p class="fragment">→ Small: runs in 1 process</p>
+					<p class="fragment">→ Medium: runs in 1 machine</p>
+					<p class="fragment">→ Large: runs on multiple machines</p>
+				</section>
+
+				<section style="text-align:left;">
+					<h4>Identifying tests by <b>scope</b>:</h4>
+					<p class="fragment">→ Narrow: small part of the system (class, method)</p>
+					<p class="fragment">→ Medium: interaction between small number of components (web server and db)</p>
+					<p class="fragment">→ Large: interaction between several distinct parts of the system</p>
+				</section>
+
+				<section data-transition="slide-in fade-out" >
+					<img height="600" src="assets/scopesize.png">
+				</section>
+
+				<section data-transition="fade-in slide-out">
+					<img height="600" src="assets/scopesize2.png" >
+				</section>
+
+				<section data-transition="slide-in fade-out" >
+					<h4><b>Narrow tests</b> can drive the design of your code!</h4>
+				</section>
+
+				<section data-transition="slide-in fade-out" >
+					<img height="600" src="assets/spagetti1.png">
+				</section>
+
+				<section data-transition="fade-in slide-out">
+					<img height="600" src="assets/spaghetti2.png" >
+				</section>
+
+				<section data-transition="slide-in fade-out" >
+					<h4>Let's talk about shapes!</h4>
+				</section>
+
+				<section data-transition="fade-in slide-out">
+					<h4>Let's talk about shapes?</h4>
+				</section>
+
+				<section>
+					<div class="r-stack">
+						<img src="assets/shapes-pyramid.png">
+						<img class="fragment" src="assets/shapes-trophy.png">
+						<img class="fragment" src="assets/shapes-honeycomb.png">
+					</div>
+				</section>
+
+				<section>
+					<h4>Wait, what is an <b>integration</b> test again?</h4>
+				</section>
+
+				<section>
+					<h4>Can <b>contract</b> tests be considered<br/><b>integration</b> tests?</h4>
+				</section>
+
+				<section>
+					<img src="assets/searlstweet.png">
+				</section>
+
+				<section data-transition="fade-in slide-out">
+					<img height="600" src="assets/scopesize2.png" >
+				</section>
+
+				<section>
+					<h4>Design your test suite with the same care<br/>as your <b>production</b> code</h4>
+				</section>
+
+				<section>
+					<h3>Testability = Maintenability</h3>
+					<h5 class="fragment">→ AGILITY</h5>
+					<h5 class="fragment">→ PRODUCT SUCCESS</h5>
+					<h5 class="fragment">→ PROFIT!</h5>
+				</section>
+
+				<section data-auto-animate>
+					<h2>Dziękuję! 🇵🇱</h2>
+					<small>
+						<a href="https://twitter.com/antodippo" target="_blaak">Twitter: @antodippo</a> |
+						<a href="https://fosstodon.org/@antodippo" target="_blaak">Mastodon: @antodippo</a> |
+						<a href="https://antodippo.com" target="_blaak">antodippo.com</a>
+					</small>
+					<aside class="notes">Gencuie</aside>
+				</section>
 			</div>
 		</div>
 
@@ -26,15 +203,24 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
+			Reveal.initialize
+			(
+				{
+					dependencies:
+					[
+						{
+							src: 'plugin/title-footer/title-footer.js',
+							async: true,
+							callback: function() { title_footer.initialize('Shape up your testing strategy | Antonello D\'Ippolito | @antodippo | PHPCon Poland 2023'); }
+						},
+						{
+							src: 'plugin/wordcloud/reveal-wordcloud.js',
+						    condition: function() { return !!document.querySelector( '[wordcloud]' ); }
+						},
+					],
+					plugins: [ RevealNotes, RevealHighlight ]
+				}
+			);
 		</script>
 	</body>
 </html>
